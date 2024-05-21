@@ -75,7 +75,7 @@ $star_valutation = $_GET['stars'] ?? null;
     </form>
 
     <?php foreach ($hotels as $cur_hotel) { ?>
-        <?php if ($parking_choise == $cur_hotel['parking']) { ?>
+        <?php if ($parking_choise == $cur_hotel['parking'] && $star_valutation <= $cur_hotel['vote']) { ?>
             <div class="container">
                 <div class="card">
                     <h2><?php echo $cur_hotel['name'] ?></h2>
